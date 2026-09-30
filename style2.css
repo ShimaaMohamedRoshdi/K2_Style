@@ -1,0 +1,94 @@
+/* ==========================================================
+   ChequeForm - GREEN / LIGHT theme override
+   Put this at the END of your Custom CSS (it overrides the gray)
+   ========================================================== */
+
+body.theme-entry {
+    --g-main: #2e9e6b;        /* main green */
+    --g-dark: #217a51;        /* hover / borders */
+    --g-light: #e6f6ee;       /* light green background */
+    --g-lighter: #f4fbf7;     /* very light */
+    --g-border: #bfe3d0;
+    background: #f4fbf7 !important;
+}
+
+/* ---------- Section headers (the gray bars) ---------- */
+body.theme-entry .panel > .panel-header,
+body.theme-entry .panel > .panel-header .panel-header-l,
+body.theme-entry .panel > .panel-header .panel-header-c,
+body.theme-entry .panel > .panel-header .panel-header-r,
+body.theme-entry .grid > .grid-header,
+body.theme-entry .grid > .grid-header .grid-header-wrapper {
+    background: var(--g-light) !important;
+    background-image: none !important;
+    border-color: var(--g-border) !important;
+}
+
+/* left green accent line on the header */
+body.theme-entry .panel > .panel-header,
+body.theme-entry .grid > .grid-header {
+    border-left: 5px solid var(--g-main) !important;
+}
+
+/* header text + collapse arrow */
+body.theme-entry .panel-header-text,
+body.theme-entry .panel-header-text span,
+body.theme-entry .grid-header-text {
+    color: var(--g-dark) !important;
+    font-weight: 700;
+}
+body.theme-entry .panel-header-controls svg path,
+body.theme-entry .grid-header-controls svg path {
+    stroke: var(--g-dark) !important;
+}
+
+/* panel card border */
+body.theme-entry .panel {
+    border: 1px solid var(--g-border) !important;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ---------- Inputs ---------- */
+body.theme-entry input.SourceCode-Forms-Controls-Web-TextBox:focus {
+    border-color: var(--g-main) !important;
+    box-shadow: 0 0 0 3px rgba(46, 158, 107, .18);
+}
+
+/* dropdown underline + arrow */
+body.theme-entry .dropdown-box .input-control-m-c,
+body.theme-entry .dropdown-box .styling-outer-wrapper {
+    border-bottom-color: var(--g-main) !important;
+}
+body.theme-entry .dropdown-box .dropdown-expand-icon svg path {
+    fill: var(--g-main) !important;
+}
+
+/* disabled fields (Customer Information) */
+body.theme-entry input.SourceCode-Forms-Controls-Web-TextBox[disabled] {
+    background: var(--g-lighter) !important;
+    border: 1px dashed var(--g-border) !important;
+}
+
+/* dropdown list */
+.drop-menu.style-aware li:hover a { background: var(--g-light) !important; }
+.drop-menu.style-aware li.selected a { background: var(--g-main) !important; color: #fff !important; }
+
+/* ---------- Buttons ---------- */
+body.theme-entry a.SourceCode-Forms-Controls-Web-Button {
+    background: var(--g-main) !important;
+    color: #fff !important;
+    border-radius: 6px;
+}
+body.theme-entry a.SourceCode-Forms-Controls-Web-Button:hover {
+    background: var(--g-dark) !important;
+}
+
+/* ---------- Documents grid ---------- */
+body.theme-entry .grid-column-header-cell {
+    background: var(--g-light) !important;
+    border-bottom: 2px solid var(--g-main) !important;
+}
+body.theme-entry .grid-column-header-text { color: var(--g-dark) !important; }
+body.theme-entry .grid-content-table.zebra-stripes tr:nth-child(even) { background: var(--g-lighter) !important; }
+body.theme-entry .grid-content-table tr:hover { background: var(--g-light) !important; }
