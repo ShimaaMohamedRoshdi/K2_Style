@@ -1,0 +1,207 @@
+/* ==========================================================
+   ChequeForm - K2 Nintex SmartForms custom CSS
+   Paste into: Form > Styles tab > "Custom CSS" (or Style Profile)
+   ========================================================== */
+
+/* ---------- 1. Design tokens ---------- */
+.theme-entry {
+    --cf-primary: #0b5cab;
+    --cf-primary-dark: #084a8a;
+    --cf-accent: #f5a623;
+    --cf-bg: #f3f6fb;
+    --cf-card: #ffffff;
+    --cf-border: #d5deea;
+    --cf-text: #1f2d3d;
+    --cf-muted: #6b7a8c;
+    --cf-disabled-bg: #eef1f6;
+    --cf-radius: 8px;
+    --cf-shadow: 0 2px 8px rgba(16, 42, 84, .08);
+}
+
+/* ---------- 2. Page ---------- */
+body.theme-entry {
+    background: var(--cf-bg) !important;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    color: var(--cf-text);
+}
+
+.theme-entry .runtime-content { margin: 16px auto !important; max-width: 1100px; }
+.theme-entry .form { padding: 8px; }
+
+/* ---------- 3. Section panels (Customer Service / Customer Information) ---------- */
+.theme-entry .panel {
+    background: var(--cf-card);
+    border: 1px solid var(--cf-border);
+    border-radius: var(--cf-radius);
+    box-shadow: var(--cf-shadow);
+    overflow: hidden;
+}
+
+.theme-entry .panel-header,
+.theme-entry .panel-header-l,
+.theme-entry .panel-header-c,
+.theme-entry .panel-header-r {
+    background: linear-gradient(90deg, var(--cf-primary), var(--cf-primary-dark)) !important;
+    border: 0 !important;
+}
+
+.theme-entry .panel-header-text,
+.theme-entry .panel-header-text span {
+    color: #fff !important;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+
+.theme-entry .panel-header-controls a svg path { stroke: #fff !important; }
+
+.theme-entry .panel-body-wrapper { padding: 14px 16px; }
+
+/* ---------- 4. Labels ---------- */
+.theme-entry .SourceCode-Forms-Controls-Web-Label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cf-muted);
+}
+
+/* ---------- 5. Textboxes ---------- */
+.theme-entry input.SourceCode-Forms-Controls-Web-TextBox,
+.theme-entry .input-control.text-input input.input-control {
+    width: 100%;
+    box-sizing: border-box;
+    height: 38px;
+    padding: 6px 12px;
+    background: #fff;
+    border: 1px solid var(--cf-border) !important;
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--cf-text);
+    transition: border-color .15s, box-shadow .15s;
+}
+
+.theme-entry input.SourceCode-Forms-Controls-Web-TextBox:focus {
+    outline: none;
+    border-color: var(--cf-primary) !important;
+    box-shadow: 0 0 0 3px rgba(11, 92, 171, .15);
+}
+
+.theme-entry input.SourceCode-Forms-Controls-Web-TextBox.watermark { color: #9aa7b6; }
+
+/* Disabled / read-only (Customer Information) */
+.theme-entry input.SourceCode-Forms-Controls-Web-TextBox[disabled],
+.theme-entry input.SourceCode-Forms-Controls-Web-TextBox.disabled {
+    background: var(--cf-disabled-bg) !important;
+    color: var(--cf-text) !important;
+    border-style: dashed !important;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+/* ---------- 6. Dropdowns ---------- */
+.theme-entry .dropdown-box .styling-outer-wrapper {
+    background: #fff;
+    border: 1px solid var(--cf-border);
+    border-radius: 6px;
+    min-height: 38px;
+    overflow: hidden;
+}
+
+.theme-entry .dropdown-box .styling-font {
+    font-size: 14px;
+    color: var(--cf-text);
+}
+
+.theme-entry .dropdown-box:hover .styling-outer-wrapper { border-color: var(--cf-primary); }
+
+.theme-entry .dropdown-box .dropdown-expand-icon svg path { fill: var(--cf-primary) !important; }
+
+/* dropdown list */
+.drop-menu.style-aware {
+    border: 1px solid var(--cf-border);
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(16, 42, 84, .15);
+    overflow: hidden;
+}
+
+.drop-menu.style-aware li a { padding: 8px 12px; color: var(--cf-text); }
+.drop-menu.style-aware li:hover a { background: #e8f1fb; }
+.drop-menu.style-aware li.selected a { background: var(--cf-primary); color: #fff; }
+
+/* ---------- 7. Buttons ---------- */
+.theme-entry a.SourceCode-Forms-Controls-Web-Button {
+    display: inline-block;
+    padding: 9px 26px;
+    background: var(--cf-primary);
+    color: #fff !important;
+    border: 0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .15s, transform .05s;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button:hover { background: var(--cf-primary-dark); }
+.theme-entry a.SourceCode-Forms-Controls-Web-Button:active { transform: translateY(1px); }
+
+/* Main "Submit Request" button */
+.theme-entry a[name="Submit_form"] {
+    background: var(--cf-accent);
+    color: #1f2d3d !important;
+    padding: 11px 34px;
+    font-size: 15px;
+}
+.theme-entry a[name="Submit_form"]:hover { background: #dd9316; }
+
+/* "View File" button inside grid */
+.theme-entry .grid-summary a.SourceCode-Forms-Controls-Web-Button {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* ---------- 8. Documents grid ---------- */
+.theme-entry .grid {
+    background: var(--cf-card);
+    border: 1px solid var(--cf-border);
+    border-radius: var(--cf-radius);
+    box-shadow: var(--cf-shadow);
+    overflow: hidden;
+}
+
+.theme-entry .grid-column-header-cell {
+    background: #e9f0f9 !important;
+    border-bottom: 2px solid var(--cf-primary);
+}
+
+.theme-entry .grid-column-header-text {
+    color: var(--cf-primary-dark);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.theme-entry .grid-content-table td { padding: 2px 4px; }
+.theme-entry .grid-content-table.zebra-stripes tr:nth-child(even) { background: #f7f9fc; }
+.theme-entry .grid-content-table tr:hover { background: #e8f1fb; }
+.theme-entry .grid-content-cell-wrapper { font-size: 13px; color: var(--cf-text); }
+
+/* hide base64 column visually */
+.theme-entry .grid-column-headers th:nth-child(5),
+.theme-entry .grid-content-table td:nth-child(5) { display: none; }
+
+/* ---------- 9. Spacing between rows ---------- */
+.theme-entry .form .row { margin-bottom: 14px; }
+
+/* ---------- 10. Responsive ---------- */
+@media (max-width: 720px) {
+    .theme-entry .Grid-Layout.root-table {
+        grid-template-columns: 1fr !important;
+    }
+    .theme-entry .Grid-Layout.root-table > span[layouttype="cell"] {
+        grid-column: 1 / 2 !important;
+        grid-row: auto !important;
+        margin-bottom: 10px;
+    }
+}
