@@ -1,0 +1,247 @@
+/* ==========================================================
+   ChequeForm - FINAL professional theme (ICT Misr)
+   Replaces the previous 2 css files - paste this ONLY.
+   K2 Designer > Form > Styles > Custom CSS (or Style Profile)
+   ========================================================== */
+
+/* ---------- 0. Colour tokens (change colours from here only) ---------- */
+html body.theme-entry {
+    --navy:     #0a2f6b;   /* matches the ICT MISR logo */
+    --blue:     #1456a8;
+    --g-main:   #2e9e6b;   /* main green */
+    --g-dark:   #217a51;
+    --g-light:  #e6f6ee;   /* light green (section headers) */
+    --g-lighter:#f4fbf7;
+    --g-border: #bfe3d0;
+    --text:     #1f2d3d;
+    --muted:    #5b6b7d;
+    --radius:   10px;
+    --shadow:   0 4px 14px rgba(10, 47, 107, .08);
+}
+
+/* ---------- 1. Page ---------- */
+html, html body.theme-entry {
+    background: #eef3f8 !important;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    color: var(--text);
+}
+html body.theme-entry .runtime-content {
+    max-width: 1150px;
+    margin: 20px auto !important;
+    background: transparent !important;
+}
+html body.theme-entry .runtime-form,
+html body.theme-entry .form { background: transparent !important; }
+
+/* ==========================================================
+   2. HERO  (row 1 = logo, row 2 = title, row 3 = description)
+   ========================================================== */
+html body.theme-entry .form > .row:nth-child(-n+3) > * { margin: 0 !important; }
+html body.theme-entry .form > .row:nth-child(-n+3) { margin: 0 !important; }
+
+/* --- Logo --- */
+html body.theme-entry .form > .row:nth-child(1) .innerpanel {
+    background: #fff;
+    padding: 18px 28px;
+    border: 1px solid var(--g-border);
+    border-bottom: 0;
+    border-radius: var(--radius) var(--radius) 0 0;
+    box-shadow: var(--shadow);
+}
+html body.theme-entry .form > .row:nth-child(1) img.picture-control-inline {
+    width: auto !important;
+    height: auto !important;
+    max-width: 300px !important;
+    max-height: 95px !important;
+    display: block;
+}
+
+/* --- Title --- */
+html body.theme-entry .form > .row:nth-child(2) .innerpanel {
+    background: linear-gradient(90deg, var(--navy) 0%, var(--blue) 65%, var(--g-main) 100%);
+    padding: 16px 28px;
+    box-shadow: var(--shadow);
+}
+html body.theme-entry .form span[name="Label"].SourceCode-Forms-Controls-Web-Label {
+    color: #fff !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    letter-spacing: .5px;
+    margin: 0 !important;
+    text-transform: none;
+}
+
+/* --- Description --- */
+html body.theme-entry .form > .row:nth-child(3) .innerpanel {
+    background: var(--g-light);
+    border: 1px solid var(--g-border);
+    border-top: 0;
+    border-left: 6px solid var(--g-main);
+    padding: 16px 28px;
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: var(--shadow);
+}
+html body.theme-entry .form span[name="Label1"].SourceCode-Forms-Controls-Web-Label {
+    color: #2b3d55 !important;
+    font-size: 14.5px !important;
+    font-weight: 400 !important;
+    line-height: 1.75;
+    white-space: normal !important;
+    margin: 0 !important;
+}
+
+/* space between hero and the sections */
+html body.theme-entry .form > .row:nth-child(4) { margin-top: 20px !important; }
+
+/* ==========================================================
+   3. SECTION PANELS + HEADERS  (removes the gray)
+   ========================================================== */
+html body.theme-entry .panel {
+    background: #fff !important;
+    border: 1px solid var(--g-border) !important;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+html body.theme-entry .panel > .panel-header,
+html body.theme-entry .panel > .panel-header > div,
+html body.theme-entry .panel > .panel-header .panel-header-wrapper,
+html body.theme-entry .panel > .panel-header .panel-header-text,
+html body.theme-entry .panel > .panel-header .panel-header-controls,
+html body.theme-entry .grid > .grid-header,
+html body.theme-entry .grid > .grid-header .grid-header-wrapper {
+    background: var(--g-light) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border-color: var(--g-border) !important;
+}
+html body.theme-entry .panel > .panel-header,
+html body.theme-entry .grid > .grid-header {
+    border-left: 6px solid var(--g-main) !important;
+    border-bottom: 1px solid var(--g-border) !important;
+}
+html body.theme-entry .panel-header-text,
+html body.theme-entry .panel-header-text span,
+html body.theme-entry .grid-header-text {
+    color: var(--navy) !important;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .3px;
+}
+html body.theme-entry .panel-header-controls svg path,
+html body.theme-entry .grid-header-controls svg path { stroke: var(--g-dark) !important; }
+
+html body.theme-entry .panel-body-wrapper { padding: 14px 18px; }
+
+/* ==========================================================
+   4. FIELDS
+   ========================================================== */
+html body.theme-entry .form .SourceCode-Forms-Controls-Web-Label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+html body.theme-entry input.SourceCode-Forms-Controls-Web-TextBox {
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 6px 12px;
+    background: #fff !important;
+    border: 1px solid var(--g-border) !important;
+    border-radius: 6px !important;
+    font-size: 14px;
+    color: var(--text);
+    transition: border-color .15s, box-shadow .15s;
+}
+html body.theme-entry input.SourceCode-Forms-Controls-Web-TextBox:focus {
+    outline: none;
+    border-color: var(--g-main) !important;
+    box-shadow: 0 0 0 3px rgba(46, 158, 107, .18);
+}
+html body.theme-entry input.SourceCode-Forms-Controls-Web-TextBox.watermark { color: #9aa7b6; }
+html body.theme-entry input.SourceCode-Forms-Controls-Web-TextBox[disabled] {
+    background: var(--g-lighter) !important;
+    border: 1px dashed var(--g-border) !important;
+    color: var(--text) !important;
+    opacity: 1;
+}
+
+/* dropdowns */
+html body.theme-entry .dropdown-box .styling-outer-wrapper {
+    background: #fff;
+    border: 1px solid var(--g-border) !important;
+    border-radius: 6px;
+    min-height: 40px;
+    overflow: hidden;
+}
+html body.theme-entry .dropdown-box .input-control-m-c,
+html body.theme-entry .dropdown-box .input-control-body { border: 0 !important; }
+html body.theme-entry .dropdown-box:hover .styling-outer-wrapper { border-color: var(--g-main) !important; }
+html body.theme-entry .dropdown-box .dropdown-expand-icon svg path { fill: var(--g-main) !important; }
+
+.drop-menu.style-aware {
+    border: 1px solid var(--g-border);
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(10, 47, 107, .15);
+    overflow: hidden;
+}
+.drop-menu.style-aware li:hover a { background: var(--g-light) !important; }
+.drop-menu.style-aware li.selected a { background: var(--g-main) !important; color: #fff !important; }
+
+/* ==========================================================
+   5. BUTTONS
+   ========================================================== */
+html body.theme-entry a.SourceCode-Forms-Controls-Web-Button {
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--g-main) !important;
+    color: #fff !important;
+    border: 0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(33, 122, 81, .3);
+    transition: background .15s, transform .05s;
+}
+html body.theme-entry a.SourceCode-Forms-Controls-Web-Button:hover { background: var(--g-dark) !important; }
+html body.theme-entry a.SourceCode-Forms-Controls-Web-Button:active { transform: translateY(1px); }
+html body.theme-entry a[name="Submit_form"] { background: var(--navy) !important; padding: 12px 38px; font-size: 15px; }
+html body.theme-entry a[name="Submit_form"]:hover { background: var(--blue) !important; }
+html body.theme-entry .grid-summary a.SourceCode-Forms-Controls-Web-Button { padding: 4px 10px; font-size: 12px; }
+
+/* ==========================================================
+   6. DOCUMENTS GRID
+   ========================================================== */
+html body.theme-entry .grid {
+    background: #fff;
+    border: 1px solid var(--g-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+html body.theme-entry .grid-column-header-cell {
+    background: var(--g-light) !important;
+    border-bottom: 2px solid var(--g-main) !important;
+}
+html body.theme-entry .grid-column-header-text { color: var(--navy) !important; font-size: 13px; font-weight: 700; }
+html body.theme-entry .grid-content-table.zebra-stripes tr:nth-child(even) { background: var(--g-lighter) !important; }
+html body.theme-entry .grid-content-table tr:hover { background: var(--g-light) !important; }
+html body.theme-entry .grid-content-cell-wrapper { font-size: 13px; }
+html body.theme-entry .grid-column-headers th:nth-child(5),
+html body.theme-entry .grid-content-table td:nth-child(5) { display: none; }
+
+/* ==========================================================
+   7. RESPONSIVE
+   ========================================================== */
+@media (max-width: 720px) {
+    html body.theme-entry .form span[name="Label"].SourceCode-Forms-Controls-Web-Label { font-size: 20px !important; }
+    html body.theme-entry .Grid-Layout.root-table { grid-template-columns: 1fr !important; }
+    html body.theme-entry .Grid-Layout.root-table > span[layouttype="cell"] {
+        grid-column: 1 / 2 !important;
+        grid-row: auto !important;
+        margin-bottom: 10px;
+    }
+}
